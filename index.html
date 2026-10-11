@@ -22,6 +22,8 @@
   "@context": "https://schema.org",
   "@type": "AccountingService",
   "name": "Insight Tax",
+  "legalName": "Insightax Pty Ltd",
+  "taxID": "53109191611",
   "url": "https://insightax.com.au/",
   "logo": "https://insightax.com.au/assets/brand/insightax-logo.png",
   "email": "info@insightax.com.au",
@@ -250,15 +252,19 @@ header.site.scrolled{border-color:var(--line);box-shadow:0 4px 20px -12px rgba(1
 .feature p{margin:0;color:var(--muted);font-size:.96rem}
 
 /* pricing */
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-.plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 30px;display:flex;flex-direction:column;position:relative}
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.plan-note{font-size:.86rem;color:var(--muted);background:var(--bg-soft);border-radius:12px;padding:10px 12px;margin:-12px 0 20px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 24px;display:flex;flex-direction:column;position:relative}
 .plan.featured{border:2px solid var(--orange);box-shadow:var(--shadow);transform:translateY(-8px)}
 .badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap}
 .plan-for{color:var(--muted);font-size:.95rem;min-height:3em}
 .price{display:flex;align-items:baseline;gap:8px;margin:8px 0 4px;color:var(--ink)}
 .price strong{font-size:2rem;font-weight:800;letter-spacing:-.02em}
 .price span{color:var(--muted);font-size:.92rem}
-.plan ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px;font-size:.95rem;flex:1}
+.plan ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px;font-size:.95rem;flex:1;align-content:start}
+.pricing .price{flex-wrap:wrap;gap:0 8px}
+.pricing .price strong{font-size:1.75rem}
+.pricing .price span{white-space:nowrap}
 .plan li{display:flex;gap:10px}
 .plan li svg{flex:none;width:20px;height:20px;color:var(--green);margin-top:2px}
 .plan .btn{width:100%}
@@ -563,7 +569,7 @@ h1,h2,h3,h4{overflow-wrap:break-word}
           <button type="button" class="chip" aria-pressed="false" data-value="Amendments">Amendments</button>
         </div>
         <div class="picker-actions">
-          <a href="#contact" class="btn btn-primary" id="pickerGo">Get my fixed-fee quote <svg><use href="#i-arrow"/></svg></a>
+          <a href="#contact" class="btn btn-primary" id="pickerGo">Get my quote <svg><use href="#i-arrow"/></svg></a>
           <span class="picker-note">Takes 2 minutes. No obligation.</span>
         </div>
       </div>
@@ -867,7 +873,7 @@ h1,h2,h3,h4{overflow-wrap:break-word}
           <tr><td>Registered tax agent prepares your return</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="no" aria-label="No">&#10005;</span></td><td><span class="yes" aria-label="Yes">&#10003;</span></td></tr>
           <tr><td>CPA prepares your return every year</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="no" aria-label="No">&#10005;</span></td><td><span class="varies">Varies</span></td></tr>
           <tr><td>Foreign income and expat expertise</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="no" aria-label="No">&#10005;</span></td><td><span class="varies">Limited</span></td></tr>
-          <tr><td>Fixed fee quoted upfront</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="varies">Free</span></td><td><span class="varies">Varies</span></td></tr>
+          <tr><td>Price agreed before work starts</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="varies">Free</span></td><td><span class="varies">Varies</span></td></tr>
           <tr><td>Extended lodgement deadline</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="no" aria-label="No">&#10005;</span></td><td><span class="yes" aria-label="Yes">&#10003;</span></td></tr>
           <tr><td>Weekend and after-hours appointments</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="varies">n/a</span></td><td><span class="varies">Varies</span></td></tr>
           <tr><td>Year-round advice and ATO support</td><td class="us"><span class="yes" aria-label="Yes">&#10003;</span></td><td><span class="no" aria-label="No">&#10005;</span></td><td><span class="varies">Limited</span></td></tr>
@@ -901,58 +907,72 @@ h1,h2,h3,h4{overflow-wrap:break-word}
 </section>
 
 <!-- PRICING -->
-<!-- OWNER: set real starting prices in the three .price blocks below, or keep "Fixed fee" wording. -->
 <section class="section" id="pricing">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Transparent pricing</span>
-      <h2>Affordable, fixed fees</h2>
-      <p>Professional services at reasonable prices. Every quote is fixed before we start, and our fee is generally tax deductible next year.</p>
+      <h2>Clear pricing, agreed before we start</h2>
+      <p>Professional services at reasonable prices. Individual and SMSF returns are quoted as a fixed fee. Business and trust work is priced around the services you need. Either way, you know the cost before any work begins, and our fee is generally tax deductible.</p>
     </div>
     <div class="pricing">
       <div class="plan reveal">
         <img class="plan-art" src="assets/illustrations/plan-individual.svg" alt="" loading="lazy">
-        <h3>Individual</h3>
-        <p class="plan-for">Employees with straightforward income and work deductions.</p>
+        <h3>Individuals</h3>
+        <p class="plan-for">Employees, investors, expats and sole traders.</p>
         <div class="price"><strong>Fixed fee</strong><span>per return</span></div>
         <ul>
-          <li><svg><use href="#i-check"/></svg>Salary, wages and allowances</li>
-          <li><svg><use href="#i-check"/></svg>Work-related deductions reviewed</li>
-          <li><svg><use href="#i-check"/></svg>Bank interest and dividends</li>
+          <li><svg><use href="#i-check"/></svg>Salary, wages and work deductions</li>
+          <li><svg><use href="#i-check"/></svg>Rental properties, shares and capital gains</li>
+          <li><svg><use href="#i-check"/></svg>Foreign income and residency</li>
           <li><svg><use href="#i-check"/></svg>Lodged with the ATO</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost" data-service="Individual tax return">Get my quote</a>
-      </div>
-      <div class="plan featured reveal">
-        <span class="badge">Most popular</span>
-        <img class="plan-art" src="assets/illustrations/plan-expat.svg" alt="" loading="lazy">
-        <h3>Investor and Expat</h3>
-        <p class="plan-for">Rental properties, shares, crypto, or income from overseas.</p>
-        <div class="price"><strong>Fixed fee</strong><span>per return</span></div>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Everything in Individual</li>
-          <li><svg><use href="#i-check"/></svg>Rental property schedules</li>
-          <li><svg><use href="#i-check"/></svg>Capital gains calculations</li>
-          <li><svg><use href="#i-check"/></svg>Foreign income and tax offsets</li>
-          <li><svg><use href="#i-check"/></svg>Residency questions answered</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary" data-service="Expat or foreign income">Get my quote</a>
+        <p class="plan-note">We ask for some key tax information first, such as your income sources and last year&#39;s return, then confirm your fixed fee.</p>
+        <a href="#contact" class="btn btn-ghost" data-service="Individual tax return">Get my fixed quote</a>
       </div>
       <div class="plan reveal">
         <img class="plan-art" src="assets/illustrations/plan-business.svg" alt="" loading="lazy">
-        <h3>Business</h3>
-        <p class="plan-for">Partnerships, companies, trusts and SMSFs.</p>
-        <div class="price"><strong>Tailored</strong><span>fixed annual fee</span></div>
+        <h3>Businesses</h3>
+        <p class="plan-for">Sole trader businesses, partnerships and companies.</p>
+        <div class="price"><strong>Negotiated</strong><span>to your scope</span></div>
         <ul>
-          <li><svg><use href="#i-check"/></svg>Financial statements and tax return</li>
           <li><svg><use href="#i-check"/></svg>BAS lodgements</li>
-          <li><svg><use href="#i-check"/></svg>Payroll, super and cashflow</li>
-          <li><svg><use href="#i-check"/></svg>Tax planning meeting</li>
+          <li><svg><use href="#i-check"/></svg>Payroll and super</li>
+          <li><svg><use href="#i-check"/></svg>Cashflow management</li>
+          <li><svg><use href="#i-check"/></svg>Financial statements and tax return</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost" data-service="Business tax return">Get my quote</a>
+        <p class="plan-note">Every business is different, so we agree a fee based on the scope of services you need.</p>
+        <a href="#contact" class="btn btn-ghost" data-service="Business tax return">Discuss my business</a>
+      </div>
+      <div class="plan reveal">
+        <img class="plan-art" src="assets/illustrations/plan-trust.svg" alt="" loading="lazy">
+        <h3>Trusts</h3>
+        <p class="plan-for">Family and discretionary trusts, including deceased estates.</p>
+        <div class="price"><strong>Negotiated</strong><span>to your scope</span></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Trust tax return</li>
+          <li><svg><use href="#i-check"/></svg>Distributions to beneficiaries worked out</li>
+          <li><svg><use href="#i-check"/></svg>Deceased estate returns</li>
+          <li><svg><use href="#i-check"/></svg>Financial statements</li>
+        </ul>
+        <p class="plan-note">Like business work, trust fees are agreed with you based on the scope required.</p>
+        <a href="#contact" class="btn btn-ghost" data-service="Company, trust, partnership or SMSF">Discuss my trust</a>
+      </div>
+      <div class="plan reveal">
+        <img class="plan-art" src="assets/illustrations/plan-smsf.svg" alt="" loading="lazy">
+        <h3>SMSFs</h3>
+        <p class="plan-for">Complying self-managed super funds.</p>
+        <div class="price"><strong>Fixed fee</strong><span>to start</span></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Annual SMSF tax return</li>
+          <li><svg><use href="#i-check"/></svg>Financial statements</li>
+          <li><svg><use href="#i-check"/></svg>Member statements</li>
+          <li><svg><use href="#i-check"/></svg>Lodged with the ATO</li>
+        </ul>
+        <p class="plan-note">Your quote is fixed and will note any extra cost if your fund is more complex than usual.</p>
+        <a href="#contact" class="btn btn-ghost" data-service="Company, trust, partnership or SMSF">Get my SMSF quote</a>
       </div>
     </div>
-    <p class="pricing-note reveal">Not sure which fits? <a href="tel:+61403974718"><strong>Call 0403 974 718</strong></a> and we will tell you in two minutes.</p>
+    <p class="pricing-note reveal">Not sure which fits? <a href="tel:+61403974718"><strong>Call 0403 974 718</strong></a> and we will point you in the right direction.</p>
   </div>
 </section>
 
@@ -1045,6 +1065,10 @@ h1,h2,h3,h4{overflow-wrap:break-word}
         <p>Please complete our <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2C-doF60NlEf3s1jZiqP95f9Grcc0jQEr7lWSJMmHqW3D2w/viewform" target="_blank" rel="noopener">online appointment form</a> beforehand so your details are correctly recorded in our secure database. Bring receipts for deductions, rental and investment statements, and any foreign income records. We pre-fill most income details from the ATO.</p>
       </details>
       <details>
+        <summary>How much will it cost?</summary>
+        <p>Individual tax returns are a fixed fee. We just need some key tax information first, such as your income sources and last year's return, so the quote is accurate. Business and trust work is negotiated around the scope of services you need. SMSF returns start as a fixed fee, and your quote will note any extra cost if the fund is more complex. You always know the price before we begin.</p>
+      </details>
+      <details>
         <summary>Is your fee tax deductible?</summary>
         <p>In most cases, yes. The cost of managing your tax affairs, including a tax agent's fee, is generally deductible in the year you pay it.</p>
       </details>
@@ -1071,7 +1095,7 @@ h1,h2,h3,h4{overflow-wrap:break-word}
       <span class="eyebrow">Get started</span>
       <h2>Book an appointment or get a quote</h2>
       <p>Please complete the appointment form before your appointment so your details are correctly recorded in our secure database. It lets us give you a more efficient, personalised service on the day.</p>
-      <p>Just want a price first? Switch to "Get a quote" and we will come back with a clear, fixed quote.</p>
+      <p>Just want a price first? Switch to "Get a quote". Individual returns get a fixed fee once we have seen your key tax information, SMSFs start with a fixed fee, and business and trust work is priced around the services you need.</p>
       <ul class="contact-list">
         <li><span class="c-ic"><svg><use href="#i-phone"/></svg></span><a href="tel:+61403974718">0403 974 718</a></li>
         <li><span class="c-ic"><svg><use href="#i-mail"/></svg></span><a href="mailto:info@insightax.com.au">info@insightax.com.au</a></li>
@@ -1122,7 +1146,7 @@ h1,h2,h3,h4{overflow-wrap:break-word}
           <option>Something else</option>
         </select>
       </div>
-      <div class="field"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" placeholder="For example: two rental properties, moved from the US in 2024, have a US preparer already."></textarea></div>
+      <div class="field"><label for="f-msg">Anything we should know?</label><textarea id="f-msg" name="message" placeholder="Individuals: your income sources, e.g. salary, two rental properties, shares, overseas income. Businesses and trusts: the services you need."></textarea></div>
       <button class="btn btn-primary" type="submit" id="submitBtn">Get my quote <svg><use href="#i-arrow"/></svg></button>
       <p class="form-foot">Your details stay private and are only used to respond to your request.</p>
       <div class="form-ok" id="formOk" role="status">Thanks. Your email app should now be open with your request ready to send. Prefer to talk? Call 0403 974 718.</div>
@@ -1169,9 +1193,9 @@ h1,h2,h3,h4{overflow-wrap:break-word}
         </ul>
       </div>
     </div>
-    <!-- OWNER: fill in the ABN, link the privacy statement, and add the Professional Standards Scheme line only if it applies. -->
+    <!-- OWNER: link the privacy statement, and add the Professional Standards Scheme line only if it applies. -->
     <div class="legal">
-      <span>&copy; <span id="yr">2026</span> Insight Tax. ABN [to be added]. Registered Tax Agent 75496000.</span>
+      <span>&copy; <span id="yr">2026</span> Insightax Pty Ltd. ABN 53 109 191 611. Registered Tax Agent 75496000.</span>
       <span>General information only. Not advice for your specific circumstances. Illustrations by <a href="https://undraw.co" target="_blank" rel="noopener">unDraw</a>.</span>
     </div>
   </div>

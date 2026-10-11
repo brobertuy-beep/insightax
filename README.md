@@ -16,9 +16,9 @@ Single-page site for Insight Tax (insightax.com.au), Robert Avey, CPA and Regist
 - `assets/og-image.png`: 1200x630 preview image for link sharing
 
 ## Fill in before going live (search the HTML for `OWNER:`)
-1. ABN in the footer, and a link to the privacy statement.
+1. A link to the privacy statement in the footer (ABN 53 109 191 611 for Insightax Pty Ltd is in place).
 2. Testimonials: the three reviews are samples. Replace with real client reviews (with permission) and delete the placeholder tags.
-3. Pricing: add starting prices if desired, or keep the "Fixed fee" wording.
+3. Pricing follows the owner's policy: Individuals fixed fee after key tax information is reviewed; Businesses and Trusts negotiated to scope; SMSFs fixed fee to start, with any complexity noted in the quote. Add dollar figures only if the practice wants them published.
 4. Headshot: replace the illustrated avatar in the About section with a photo of Robert.
 5. Badges: the TPB, CPA Australia and Xero Certified Advisor badges are in place; keep them current with each body's logo rules.
 6. Appointments use the practice's Google Form, embedded in the contact section and linked from the steps, FAQ and footer. The form must stay set to accept responses without sign-in for the embed to work. The separate "Get a quote" tab opens the visitor's email app addressed to info@insightax.com.au; connect a form service (Formspree, etc.) for direct submissions.
